@@ -1,0 +1,8 @@
+private: //variables
+public:  //variables
+private: //methods
+public:  //methods
+
+#pragma warning(push, 0)
+#include <SFML/Graphics.hpp>
+#pragma warning(pop)

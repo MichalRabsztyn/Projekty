@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\DrawableObjects">
+      <UniqueIdentifier>{9ff0b70d-23bb-4713-beea-f8967f5065ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Drawable">
+      <UniqueIdentifier>{ab7a5f7e-4470-40b7-8047-75431ba96594}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\DrawableObjects\PlayerMenu">
+      <UniqueIdentifier>{ced8393b-84b5-4a6b-9d8d-38d7066f0682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\DrawableObjects\TextBox">
+      <UniqueIdentifier>{5760ec45-ddf8-408d-bd4d-d0ab533444ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Scripts">
+      <UniqueIdentifier>{6fa75f63-7437-4d3b-8bef-d10fb8bda804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Drawable\PlayerMenu">
+      <UniqueIdentifier>{10e5e8e5-6f0c-4f3a-9259-341a3130f97d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Drawable\TextBox">
+      <UniqueIdentifier>{9c3b1f92-6238-4911-841e-3abc1bcca2ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Test">
+      <UniqueIdentifier>{a11096ae-2779-47c3-87e9-98e89d1f18ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Scripts">
+      <UniqueIdentifier>{4ce4b086-48c1-4ec1-8167-471690d49f0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Scenes">
+      <UniqueIdentifier>{c9e5dc06-f1fc-4d2b-89e6-6c2b755764ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Scenes">
+      <UniqueIdentifier>{85d45eed-a477-4984-9d96-d7b672cb286d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TextBoxBase.cpp">
+      <Filter>Pliki źródłowe\Drawable\TextBox</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMenu.cpp">
+      <Filter>Pliki źródłowe\Drawable\PlayerMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSystem.cpp">
+      <Filter>Pliki źródłowe\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Pliki źródłowe\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Pliki źródłowe\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>Pliki źródłowe\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Pliki źródłowe\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Move.cpp">
+      <Filter>Pliki źródłowe\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Pliki źródłowe\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Pokemon.cpp">
+      <Filter>Pliki źródłowe\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMenuActions.cpp">
+      <Filter>Pliki źródłowe\Drawable\PlayerMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMenuMoves.cpp">
+      <Filter>Pliki źródłowe\Drawable\PlayerMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMenuBattleScene.cpp">
+      <Filter>Pliki źródłowe\Drawable\PlayerMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMenuYesNo.cpp">
+      <Filter>Pliki źródłowe\Drawable\PlayerMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupScene.cpp">
+      <Filter>Pliki źródłowe\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMenuOutput.cpp">
+      <Filter>Pliki źródłowe\Drawable\PlayerMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBoxLong.cpp">
+      <Filter>Pliki źródłowe\Drawable\TextBox</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBoxMedium.cpp">
+      <Filter>Pliki źródłowe\Drawable\TextBox</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBoxSmall.cpp">
+      <Filter>Pliki źródłowe\Drawable\TextBox</Filter>
+    </ClCompile>
+    <ClCompile Include="ChoosePokemonScene.cpp">
+      <Filter>Pliki źródłowe\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="ChooseActionScene.cpp">
+      <Filter>Pliki źródłowe\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="ChooseMoveScene.cpp">
+      <Filter>Pliki źródłowe\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuScene.cpp">
+      <Filter>Pliki źródłowe\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionsScene.cpp">
+      <Filter>Pliki źródłowe\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="WinLooseScene.cpp">
+      <Filter>Pliki źródłowe\Scenes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PlayerMenu.h">
+      <Filter>Pliki nagłówkowe\DrawableObjects\PlayerMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBoxBase.h">
+      <Filter>Pliki nagłówkowe\DrawableObjects\TextBox</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBoxLong.h">
+      <Filter>Pliki nagłówkowe\DrawableObjects\TextBox</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBoxMedium.h">
+      <Filter>Pliki nagłówkowe\DrawableObjects\TextBox</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBoxSmall.h">
+      <Filter>Pliki nagłówkowe\DrawableObjects\TextBox</Filter>
+    </ClInclude>
+    <ClInclude Include="Pokemon.h">
+      <Filter>Pliki nagłówkowe\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSystem.h">
+      <Filter>Pliki nagłówkowe\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Pliki nagłówkowe\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Pliki nagłówkowe\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>Pliki nagłówkowe\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Move.h">
+      <Filter>Pliki nagłówkowe\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Pliki nagłówkowe\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMenuActions.h">
+      <Filter>Pliki nagłówkowe\DrawableObjects\PlayerMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMenuMoves.h">
+      <Filter>Pliki nagłówkowe\DrawableObjects\PlayerMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMenuOutput.h">
+      <Filter>Pliki nagłówkowe\DrawableObjects\PlayerMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMenuBattleScene.h">
+      <Filter>Pliki nagłówkowe\DrawableObjects\PlayerMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>Pliki źródłowe\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMenuYesNo.h">
+      <Filter>Pliki nagłówkowe\DrawableObjects\PlayerMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupScene.h">
+      <Filter>Pliki nagłówkowe\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="ChoosePokemonScene.h">
+      <Filter>Pliki nagłówkowe\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseActionScene.h">
+      <Filter>Pliki nagłówkowe\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseMoveScene.h">
+      <Filter>Pliki nagłówkowe\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuScene.h">
+      <Filter>Pliki nagłówkowe\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsScene.h">
+      <Filter>Pliki nagłówkowe\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="WinLooseScene.h">
+      <Filter>Pliki nagłówkowe\Scenes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pokemon.dat">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+    <None Include="moves.dat">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Schowek.txt">
+      <Filter>Pliki źródłowe\Test</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

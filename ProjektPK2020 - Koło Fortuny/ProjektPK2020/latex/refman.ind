@@ -1,0 +1,98 @@
+\begin{theindex}
+
+  \item {bool}
+    \subitem {funkcje.h}, 8
+
+  \indexspace
+
+  \item {czytajZPliku}
+    \subitem {funkcje.c}, 3
+    \subitem {funkcje.h}, 8
+
+  \indexspace
+
+  \item {funkcje.c}, 3
+    \subitem {czytajZPliku}, 3
+    \subitem {koloFortuny}, 4
+    \subitem {liczWystapieniaLiteryWHasle}, 4
+    \subitem {obslugaArgumentow}, 4
+    \subitem {obslugaZnaku}, 4
+    \subitem {sprawdzCzyWygrana}, 5
+    \subitem {wprowadzanieZnaku}, 5
+    \subitem {wygrana}, 5
+    \subitem {wypiszAktualnyStanTablicy}, 6
+    \subitem {wypiszZasady}, 6
+    \subitem {zakryjHaslo}, 6
+    \subitem {zgadywanieHasla}, 7
+    \subitem {znakJestLitera}, 7
+  \item {funkcje.h}, 7
+    \subitem {bool}, 8
+    \subitem {czytajZPliku}, 8
+    \subitem {koloFortuny}, 8
+    \subitem {liczWystapieniaLiteryWHasle}, 9
+    \subitem {obslugaArgumentow}, 9
+    \subitem {obslugaZnaku}, 9
+    \subitem {sprawdzCzyWygrana}, 9
+    \subitem {wprowadzanieZnaku}, 10
+    \subitem {wygrana}, 10
+    \subitem {wypiszAktualnyStanTablicy}, 10
+    \subitem {wypiszZasady}, 11
+    \subitem {zakryjHaslo}, 11
+    \subitem {zgadywanieHasla}, 11
+    \subitem {znakJestLitera}, 11
+
+  \indexspace
+
+  \item {koloFortuny}
+    \subitem {funkcje.c}, 4
+    \subitem {funkcje.h}, 8
+
+  \indexspace
+
+  \item {liczWystapieniaLiteryWHasle}
+    \subitem {funkcje.c}, 4
+    \subitem {funkcje.h}, 9
+
+  \indexspace
+
+  \item {obslugaArgumentow}
+    \subitem {funkcje.c}, 4
+    \subitem {funkcje.h}, 9
+  \item {obslugaZnaku}
+    \subitem {funkcje.c}, 4
+    \subitem {funkcje.h}, 9
+
+  \indexspace
+
+  \item {sprawdzCzyWygrana}
+    \subitem {funkcje.c}, 5
+    \subitem {funkcje.h}, 9
+
+  \indexspace
+
+  \item {wprowadzanieZnaku}
+    \subitem {funkcje.c}, 5
+    \subitem {funkcje.h}, 10
+  \item {wygrana}
+    \subitem {funkcje.c}, 5
+    \subitem {funkcje.h}, 10
+  \item {wypiszAktualnyStanTablicy}
+    \subitem {funkcje.c}, 6
+    \subitem {funkcje.h}, 10
+  \item {wypiszZasady}
+    \subitem {funkcje.c}, 6
+    \subitem {funkcje.h}, 11
+
+  \indexspace
+
+  \item {zakryjHaslo}
+    \subitem {funkcje.c}, 6
+    \subitem {funkcje.h}, 11
+  \item {zgadywanieHasla}
+    \subitem {funkcje.c}, 7
+    \subitem {funkcje.h}, 11
+  \item {znakJestLitera}
+    \subitem {funkcje.c}, 7
+    \subitem {funkcje.h}, 11
+
+\end{theindex}

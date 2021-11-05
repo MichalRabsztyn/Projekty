@@ -1,0 +1,196 @@
+\doxysection{funkcje.\+c File Reference}
+\label{funkcje_8c}\index{funkcje.c@{funkcje.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}funkcje.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ wypisz\+Zasady} ()
+\item 
+void \textbf{ obsluga\+Argumentow} ()
+\item 
+char $\ast$ \textbf{ czytaj\+Z\+Pliku} (char nazwa\+Pliku[$\,$])
+\item 
+char $\ast$ \textbf{ zakryj\+Haslo} (char $\ast$haslo)
+\item 
+void \textbf{ wypisz\+Aktualny\+Stan\+Tablicy} (char litera, char aktualny\+Stan\+Tablicy[$\,$], char haslo[$\,$])
+\item 
+char \textbf{ wprowadzanie\+Znaku} (char wprowadzony\+Znak)
+\item 
+void \textbf{ wygrana} (int $\ast$stan\+Konta)
+\item 
+int \textbf{ licz\+Wystapienia\+Litery\+W\+Hasle} (char wprowadzona\+Litera, char haslo[$\,$], char aktualny\+Stan\+Tablicy[$\,$])
+\item 
+int \textbf{ kolo\+Fortuny} (int wystapienia\+Litery\+W\+Hasle, int $\ast$stan\+Konta)
+\item 
+\textbf{ bool} \textbf{ sprawdz\+Czy\+Wygrana} (char haslo[$\,$], char aktualny\+Stan\+Tablicy[$\,$])
+\item 
+\textbf{ bool} \textbf{ znak\+Jest\+Litera} (char wprowadzona\+Litera, char haslo[$\,$], char aktualny\+Stan\+Tablicy[$\,$], int $\ast$stan\+Konta)
+\item 
+\textbf{ bool} \textbf{ zgadywanie\+Hasla} (char haslo[$\,$])
+\item 
+\textbf{ bool} \textbf{ obsluga\+Znaku} (char wprowadzony\+Znak, char haslo[$\,$], char aktualny\+Stan\+Tablicy[$\,$], int $\ast$stan\+Konta)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{funkcje_8c_aeb26b4d4aefc4522f4f97e24ed5761d2}} 
+\index{funkcje.c@{funkcje.c}!czytajZPliku@{czytajZPliku}}
+\index{czytajZPliku@{czytajZPliku}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{czytajZPliku()}
+{\footnotesize\ttfamily char$\ast$ czytaj\+Z\+Pliku (\begin{DoxyParamCaption}\item[{char}]{nazwa\+Pliku[$\,$] }\end{DoxyParamCaption})}
+
+Losowanie i odczytywanie z pliku hasła. 
+\begin{DoxyParams}{Parameters}
+{\em nazwa\+Pliku\mbox{[}$\,$\mbox{]}} & nazwa pliku z hasłami \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8c_ade4d10184e331a993cb773d182ad27c6}} 
+\index{funkcje.c@{funkcje.c}!koloFortuny@{koloFortuny}}
+\index{koloFortuny@{koloFortuny}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{koloFortuny()}
+{\footnotesize\ttfamily int kolo\+Fortuny (\begin{DoxyParamCaption}\item[{int}]{wystapienia\+Litery\+W\+Hasle,  }\item[{int $\ast$}]{stan\+Konta }\end{DoxyParamCaption})}
+
+Losowanie wartości od 0 do 10 będących ilością punktów za wprowadzoną spółgłoskę. Wylosowanie 0 oznacza wyzerowanie konta. 
+\begin{DoxyParams}{Parameters}
+{\em wystapienia\+Litery\+W\+Hasle} & liczba wystąpień litery we wzorze hasła \\
+\hline
+{\em stan\+Konta} & aktualny stan konta \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8c_a9b643210b6272ee149322243b5eaf331}} 
+\index{funkcje.c@{funkcje.c}!liczWystapieniaLiteryWHasle@{liczWystapieniaLiteryWHasle}}
+\index{liczWystapieniaLiteryWHasle@{liczWystapieniaLiteryWHasle}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{liczWystapieniaLiteryWHasle()}
+{\footnotesize\ttfamily int licz\+Wystapienia\+Litery\+W\+Hasle (\begin{DoxyParamCaption}\item[{char}]{wprowadzona\+Litera,  }\item[{char}]{haslo[$\,$],  }\item[{char}]{aktualny\+Stan\+Tablicy[$\,$] }\end{DoxyParamCaption})}
+
+Zliczanie wystąpień litery w haśle mnożnika punktów w wypadku wprowadzenia spółgłoski. 
+\begin{DoxyParams}{Parameters}
+{\em wprowadzona\+Litera} & wprowadzony przez użytkownika znak rozpoznany jako litera \\
+\hline
+{\em haslo} & wzór hasła \\
+\hline
+{\em aktualny\+Stan\+Tablicy\mbox{[}$\,$\mbox{]}} & tablica z ciągiem odkrytych i nieodkrytych liter \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8c_a800def78a78962c29828be42cd7a9eb9}} 
+\index{funkcje.c@{funkcje.c}!obslugaArgumentow@{obslugaArgumentow}}
+\index{obslugaArgumentow@{obslugaArgumentow}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{obslugaArgumentow()}
+{\footnotesize\ttfamily void obsluga\+Argumentow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wyświetlanie w oknie konsoli instrukcji obsługi parametrów. \mbox{\label{funkcje_8c_aa0cd40e90cf1267939864a8055becc49}} 
+\index{funkcje.c@{funkcje.c}!obslugaZnaku@{obslugaZnaku}}
+\index{obslugaZnaku@{obslugaZnaku}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{obslugaZnaku()}
+{\footnotesize\ttfamily \textbf{ bool} obsluga\+Znaku (\begin{DoxyParamCaption}\item[{char}]{wprowadzony\+Znak,  }\item[{char}]{haslo[$\,$],  }\item[{char}]{aktualny\+Stan\+Tablicy[$\,$],  }\item[{int $\ast$}]{stan\+Konta }\end{DoxyParamCaption})}
+
+Definiowanie czy użytkownik wprowadził poprawny znak będący literą lub czy chce podać pełne hasło. 
+\begin{DoxyParams}{Parameters}
+{\em wprowadzony\+Znak} & wprowadzony przez użytkownika znak jeszcze niezdefiniowany jako litera, bądź \char`\"{}?\char`\"{} \\
+\hline
+{\em haslo} & wzór hasła \\
+\hline
+{\em aktualny\+Stan\+Tablicy\mbox{[}$\,$\mbox{]}} & tablica z ciągiem odkrytych i nieodkrytych liter \\
+\hline
+{\em stan\+Konta} & aktualny stan konta \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8c_afed0a572ad03d1da949a9431df4499ca}} 
+\index{funkcje.c@{funkcje.c}!sprawdzCzyWygrana@{sprawdzCzyWygrana}}
+\index{sprawdzCzyWygrana@{sprawdzCzyWygrana}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{sprawdzCzyWygrana()}
+{\footnotesize\ttfamily \textbf{ bool} sprawdz\+Czy\+Wygrana (\begin{DoxyParamCaption}\item[{char}]{haslo[$\,$],  }\item[{char}]{aktualny\+Stan\+Tablicy[$\,$] }\end{DoxyParamCaption})}
+
+Sprawdzenie czy aktualny stan tablicy jest taki sam jak wzor hasla. 
+\begin{DoxyParams}{Parameters}
+{\em haslo} & wzór hasła \\
+\hline
+{\em aktualny\+Stan\+Tablicy\mbox{[}$\,$\mbox{]}} & tablica z ciągiem odkrytych i nieodkrytych liter \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8c_a312bf535d9f96f579a6ba9201ac34ce0}} 
+\index{funkcje.c@{funkcje.c}!wprowadzanieZnaku@{wprowadzanieZnaku}}
+\index{wprowadzanieZnaku@{wprowadzanieZnaku}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{wprowadzanieZnaku()}
+{\footnotesize\ttfamily char wprowadzanie\+Znaku (\begin{DoxyParamCaption}\item[{char}]{wprowadzony\+Znak }\end{DoxyParamCaption})}
+
+Obsługa wprowadzania pojedynczej litery. 
+\begin{DoxyParams}{Parameters}
+{\em wprowadzony\+Znak} & wprowadzony przez użytkownika znak jeszcze niezdefiniowany jako litera, bądź \char`\"{}?\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8c_a7088c4523baa966d5854a4dcdd6f6ce4}} 
+\index{funkcje.c@{funkcje.c}!wygrana@{wygrana}}
+\index{wygrana@{wygrana}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{wygrana()}
+{\footnotesize\ttfamily void wygrana (\begin{DoxyParamCaption}\item[{int $\ast$}]{stan\+Konta }\end{DoxyParamCaption})}
+
+Powiadomienie użytkownika o wygranej rundzie i wyświetlenie stanu konta. 
+\begin{DoxyParams}{Parameters}
+{\em stan\+Konta} & aktualny stan konta \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8c_a3cdd97f4cd3572e33df1e5d495520080}} 
+\index{funkcje.c@{funkcje.c}!wypiszAktualnyStanTablicy@{wypiszAktualnyStanTablicy}}
+\index{wypiszAktualnyStanTablicy@{wypiszAktualnyStanTablicy}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{wypiszAktualnyStanTablicy()}
+{\footnotesize\ttfamily void wypisz\+Aktualny\+Stan\+Tablicy (\begin{DoxyParamCaption}\item[{char}]{litera,  }\item[{char}]{aktualny\+Stan\+Tablicy[$\,$],  }\item[{char}]{haslo[$\,$] }\end{DoxyParamCaption})}
+
+Wypisywanie w oknie konsolii aktualnego stanu odkrytych i nieodkrytych liter hasła. 
+\begin{DoxyParams}{Parameters}
+{\em litera} & wprowadzona przez użytkownika litera \\
+\hline
+{\em aktualny\+Stan\+Tablicy\mbox{[}$\,$\mbox{]}} & tablica z ciągiem odkrytych i nieodkrytych liter \\
+\hline
+{\em haslo} & wzór hasła \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8c_a49ba0c72a82be0851f4a66fb5d52b9b4}} 
+\index{funkcje.c@{funkcje.c}!wypiszZasady@{wypiszZasady}}
+\index{wypiszZasady@{wypiszZasady}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{wypiszZasady()}
+{\footnotesize\ttfamily void wypisz\+Zasady (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wyświetlanie zasad gry, jeżeli jako parametr podano \textquotesingle{}-\/z\textquotesingle{}. \mbox{\label{funkcje_8c_ae763c903276f95bb1691820eb015d652}} 
+\index{funkcje.c@{funkcje.c}!zakryjHaslo@{zakryjHaslo}}
+\index{zakryjHaslo@{zakryjHaslo}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{zakryjHaslo()}
+{\footnotesize\ttfamily char$\ast$ zakryj\+Haslo (\begin{DoxyParamCaption}\item[{char $\ast$}]{haslo }\end{DoxyParamCaption})}
+
+Zakrywanie hasla w oknie konsoli użytkownik będzie widzieć znaki w ilości i konfiguracji odpowiadającej tej we wzorze hasła. 
+\begin{DoxyParams}{Parameters}
+{\em haslo} & wzór hasła \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8c_a362a368246d8a8ad809fc0393cb6375d}} 
+\index{funkcje.c@{funkcje.c}!zgadywanieHasla@{zgadywanieHasla}}
+\index{zgadywanieHasla@{zgadywanieHasla}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{zgadywanieHasla()}
+{\footnotesize\ttfamily \textbf{ bool} zgadywanie\+Hasla (\begin{DoxyParamCaption}\item[{char}]{haslo[$\,$] }\end{DoxyParamCaption})}
+
+Sprawdzenie czy ciąg znaków podanych po wprowadzeniu przez użytkowanika \char`\"{}?\char`\"{} jest zgodny ze wzorem hasła. 
+\begin{DoxyParams}{Parameters}
+{\em haslo} & wzór hasła \\
+\hline
+\end{DoxyParams}
+\mbox{\label{funkcje_8c_abebb5355f6be1b47c4405d204a17a768}} 
+\index{funkcje.c@{funkcje.c}!znakJestLitera@{znakJestLitera}}
+\index{znakJestLitera@{znakJestLitera}!funkcje.c@{funkcje.c}}
+\doxysubsubsection{znakJestLitera()}
+{\footnotesize\ttfamily \textbf{ bool} znak\+Jest\+Litera (\begin{DoxyParamCaption}\item[{char}]{wprowadzona\+Litera,  }\item[{char}]{haslo[$\,$],  }\item[{char}]{aktualny\+Stan\+Tablicy[$\,$],  }\item[{int $\ast$}]{stan\+Konta }\end{DoxyParamCaption})}
+
+Decyzja co zrobić dalej, gdy już wiadomio, że wprowadzony znak jest literą. 
+\begin{DoxyParams}{Parameters}
+{\em wprowadzona\+Litera} & wprowadzony przez użytkownika znak rozpoznany jako litera \\
+\hline
+{\em haslo} & wzór hasła \\
+\hline
+{\em aktualny\+Stan\+Tablicy\mbox{[}$\,$\mbox{]}} & tablica z ciągiem odkrytych i nieodkrytych liter \\
+\hline
+{\em stan\+Konta} & aktualny stan konta \\
+\hline
+\end{DoxyParams}

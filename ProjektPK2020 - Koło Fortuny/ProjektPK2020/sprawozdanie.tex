@@ -1,0 +1,326 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage[utf8]{inputenc}                                      
+\usepackage[OT4]{fontenc}                                
+\usepackage[polish]{babel}                           
+\selectlanguage{polish}
+\usepackage{indentfirst} 
+\usepackage[dvips]{graphicx}
+\usepackage{tabularx}
+\usepackage{color}
+\usepackage{hyperref} 
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{ifpdf}
+\usepackage{mathtext}
+\usepackage{lmodern}
+\usepackage{filecontents}
+\usepackage{ifthen}
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.multipart,chains,arrows}
+
+
+\newcounter{nextYear}
+\setcounter{nextYear}{\the\year}
+\stepcounter{nextYear}
+
+% rozszerzenie nieco strony
+\setlength{\topmargin}{-1cm} \setlength{\textheight}{20.5cm}
+\setlength{\textwidth}{17cm} \addtolength{\hoffset}{-1.5cm}
+\setlength{\parindent}{0.5cm} \setlength{\footskip}{2cm}
+\linespread{1.2} % odstep pomiedzy wierszami
+
+
+%%%% ZYWA PAGINA %%%%%%%%%%%
+\newcommand{\tl}[1]{\textbf{#1}} 
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % usuwanie bieżących ustawień
+\fancyhead[LE,RO]{\small\bfseries\thepage}
+\fancyhead[LO]{\small\bfseries\rightmark}
+\fancyhead[RE]{\small\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} % pionowy odstęp na kreskę
+\fancypagestyle{plain}{%
+\fancyhead{} % usuń p. górne na stronach pozbawionych numeracji
+\renewcommand{\headrulewidth}{0pt} % pozioma kreska
+}
+
+%%%%%   LISTINGI %%%%%%%%
+% ustawienia listingu programow
+
+\lstset{%
+language=C++,%
+commentstyle=\textit,%
+identifierstyle=\textsf,%
+keywordstyle=\sffamily\bfseries, %
+%captionpos=b,%
+tabsize=3,%
+frame=lines,%
+numbers=left,%
+numberstyle=\tiny,%
+numbersep=5pt,%
+breaklines=true,%
+morekeywords={pWezel,Wezel,string,ref,params_result},%
+escapeinside={(*@}{@*)},%
+%basicstyle=\footnotesize,%
+%keywords={double,int,for,if,return,vector,matrix,void,public,class,string,%
+%float,sizeof,char,FILE,while,do,const}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%  NOTKI NA MARGINESIE %%%%%%%%%%%%%
+% mala zmiana sposobu wyswietlania notek bocznych
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{%
+  {\linespread{0.85}\normalfont\scriptsize%
+\oldmarginpar[\hspace{1cm}\begin{minipage}{3cm}\raggedleft\scriptsize\color{black}\textsf{#1}\end{minipage}]%    left pages
+{\hspace{0cm}\begin{minipage}{3cm}\raggedright\scriptsize\color{black}\textsf{#1}\end{minipage}}% right pages
+}%
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+%%%% WYSWIETLANIE AKTUALNEGO ROKU AKADEMICKIEGO %%%%%%%%%%%
+\newcounter{rok}
+\newcommand{\rokakademicki}{%
+   \setcounter{rok}{\number\year}%
+   \ifthenelse{\number\month<10}%
+   {\addtocounter{rok}{-1}}% rok akademicki zaczal sie w pazdzierniku poprzedniego roku
+   {}%                       rok akademicki zaczyna sie w pazdzierniku tego roku
+   \arabic{rok}/\addtocounter{rok}{1}\arabic{rok}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%% LISTA UWAG %%%%%%%%%
+\usepackage{color}
+\definecolor{brickred}      {cmyk}{0   , 0.89, 0.94, 0.28}
+
+\makeatletter \newcommand \kslistofremarks{\section*{Uwagi} \@starttoc{rks}}
+\newcommand\l@uwagas[2]
+{\par\noindent \textbf{#2:} %\parbox{10cm}
+   {#1}\par} \makeatother
+
+
+\newcommand{\ksremark}[1]{%
+   {{\color{brickred}{[#1]}}}%
+   \addcontentsline{rks}{uwagas}{\protect{#1}}%
+}
+
+\newcommand{\comma}{\ksremark{przecinek}}
+\newcommand{\nocomma}{\ksremark{bez przecinka}}
+\newcommand{\styl}{\ksremark{styl}}
+\newcommand{\ortografia}{\ksremark{ortografia}}
+\newcommand{\fleksja}{\ksremark{fleksja}}
+\newcommand{\pauza}{\ksremark{pauza `--', nie dywiz `-'}}
+\newcommand{\kolokwializm}{\ksremark{kolokwializm}}
+\newcommand{\cytowanie}{\ksremark{cytowanie}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% autor:
+\fancyhead[RE]{\small\bfseries Michał Rabsztyn} % autor sprawozdania
+
+
+
+%%%%%%%%%%% NO I ZACZYNA SIE SPRAWOZDANIE %%%%%%%%%%%
+
+\begin{document}
+\frenchspacing
+\thispagestyle{empty}
+\begin{center}
+{\Large\sf Politechnika Śląska   % Alma Mater
+
+Wydział Automatyki, Elektroniki i Informatyki
+
+}
+
+\vfill
+
+ 
+
+\vfill\vfill
+
+{\Huge\sffamily\bfseries Programowanie Komputerów\par}  
+
+\vfill\vfill
+
+{\LARGE\sf Koło Fortuny}   
+
+
+\vfill \vfill\vfill\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{tabular}{ll}
+	\toprule
+	autor                       & Michał Rabsztyn        	   \\
+	prowadzący                  & dr inż. Bożena Wieczorek   \\
+	rok akademicki              & \rokakademicki        	   \\
+	kierunek                    & informatyka           	   \\
+	rodzaj studiów              & SSI                    	   \\
+	semestr                     & 2                      	   \\
+	termin laboratorium         & czwartek, 08:30 -- 10:00 \\
+	sekcja                      & 12                   	   \\
+	termin oddania sprawozdania & 2020-08-26           	   \\
+	\bottomrule
+	                            &
+\end{tabular}
+
+\end{center}
+%%% koniec strony  tytulowej
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Treść zadania}
+\textbf{Wymagania}
+\newline
+\begin{tabular}{ll}
+\texttt{o}  & użyto języka C,\\
+\texttt{o}  & program podzielony jest na pliki źródłowe i nagłówkowe,\\
+\texttt{o}  & funkcje dokumentowane są w doxygenie,\\
+\texttt{o}  & na platformie znajduje się sprawozdanie (.pdf).\\
+\end{tabular}
+\newline 
+\newline
+\textbf{8.} Gra "Koło fortuny'' - kilka kategorii haseł.
+\newline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Analiza zadania}
+Zagadnienie przedstawia problem przyjmowania danych wprowadzanych przez użytkowanika, porównywania ich ze wzorem odczytanym z pliku i zwracania informacji o ich poprawności.
+
+
+
+
+\subsection{Algorytmy}
+Program najpierw porównuje wprowadzony znak ze wskazanym zakresem znaków ascii, a następnie z wszystkimi literami znajdującymi się we wzorze hasła. Ilość porównań zależy od długości hasła.     
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+%\draw [help lines] grid (7,8);
+\node[rectangle, draw] (A) at (5,10) {$main()$};
+	\node[rectangle, draw] (B) at (0,8) {$obslugaArgumentow()$};
+	\node[rectangle, draw] (C) at (2,7) {$wypiszZasady()$};
+	\node[rectangle, draw] (D) at (4,6) {$czytajZPliku()$};
+	\node[rectangle, draw] (E) at (6,5) {$obslugaZnaku()$};
+	\node[rectangle, draw] (F) at (7.5,6) {$zakryjHaslo()$};
+	\node[rectangle, draw] (G) at (10.2,7) {$wypiszAktualnyStanTablicy()$};
+	\node[rectangle, draw] (H) at (12,8) {$wprowadzanieZnaku()$};
+	\node[rectangle, draw] (I) at (14,9) {$wygrana()$};
+		\node[rectangle, draw] (J) at (6.5,3) {$znakJestLitera()$};
+		\node[rectangle, draw] (K) at (1,3) {$zgadywanieHasla()$};	
+			\node[rectangle, draw] (L) at (0,1) {$liczWystapieniaLiteryWHasle()$};
+			\node[rectangle, draw] (M) at (4,0) {$koloFortuny()$};
+			\node[rectangle, draw] (N) at (8.5,0) {$wypiszAktualnyStanTablicy()$};
+			\node[rectangle, draw] (O) at (13,1) {$sprawdzCzyWygrana()$};
+	
+\draw[>=latex,->] (A) -- (B);
+\draw[>=latex,->] (A) -- (C);
+\draw[>=latex,->] (A) -- (D);
+\draw[>=latex,->] (A) -- (E);
+\draw[>=latex,->] (A) -- (F);
+\draw[>=latex,->] (A) -- (G);
+\draw[>=latex,->] (A) -- (H);
+\draw[>=latex,->] (A) -- (I);
+\draw[>=latex,->] (E) -- (J);
+\draw[>=latex,->] (E) -- (K);
+\draw[>=latex,->] (J) -- (L);
+\draw[>=latex,->] (J) -- (M);
+\draw[>=latex,->] (J) -- (N);
+\draw[>=latex,->] (J) -- (O);
+
+
+
+\end{tikzpicture}
+\caption{Schemat zależności pomiędzy funkcjami}
+\label{fig:lista}
+\end{figure} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Specyfikacja zewnętrzna}
+\label{sec:sp:zewnetrzna}
+Program jest uruchamiany z linii poleceń. Należy przekazać do programu nazwę pliku wejściowego po przełączniku -h. Opcjonalnie można podać przełącznik -z, co wyświetlizasady gry, np.
+\begin{verbatim}
+program -z -h hasla.txt
+program -h hasla.txt -z
+program -h hasla.txt
+\end{verbatim}
+Przełączniki mogą być podane w dowolnej kolejności. Uruchomienie programu ze zbyt małą lub zbyt dużą liczbą parametrów 
+\begin{verbatim}
+program
+program -h hasla.txt -z zasady
+program -z
+\end{verbatim}
+powoduje wyświetlenie pomocy.  
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Specyfikacja wewnętrzna}\label{sec:sp-wew}
+Program został zrealizowany zgodnie z paradygmatem strukturalnym.  
+W programie rozdzielono interfejs od logiki aplikacji.
+
+%\lstinline|
+
+\subsection{Ogólna struktura programu}
+Program rozpoczyna działanie od sprawdzenia poprawności podanych parametrów. Jeżeli wszystko zostało podane poprawnie, program może kontynuować działanie. Losowana jest liczba z zakresu 1-(liczba haseł), a najstępnie z pliku odczytywane jest hasło, które zapisywane jest jako wzór. Tworzona jest tablica będąca reprezantacją odgadniętych i nieodgadniętych liter ze wzoru hasła. Dopóki hasło nie zostanie w pełni odgadnięte, użytkownik proszony jest o podanie znaku z klawiatury. Funkcja obslugaZnaku decyduje czy wprowadzony znak jest literą, znakiem zapytania czy nieobsługiwanym znakiem. Gdy rozpoznana zostanie litera, funkcja znakJestLitera() decyduje, w zależności od tego czy jest to samogłoska, czy spółgłoska i odpowiednio odejmuje lub dodaje punkty. Liczba dodanych punktów zależy od wartości wylosowanej w funkcji koloFortuny i liczby wystąpień litery we wzorze hasła. Użytkownik może podać w dowolnym momencie całe hasło wprowadzając najpierw "?", a następnie wpisując odpowiedni ciąg liter.
+
+
+
+\subsection{Szczegółowy opis typów i funkcji}
+
+Szczegółowy opis typów i funkcji zawarty jest w załączniku.
+
+ 
+
+\section{Testowanie}
+	Program został przetestowany na pliku hasla.txt zawierającym łącznie 50 haseł z 10 różnych kategorii.
+	Program został sprawdzony pod kątem wycieków pamięci.
+
+
+\section{Wnioski}
+Dla urozmaicenia rozgrywki można dodać fukcjonalność bonusów oraz większe urozmaicenie kategorii haseł wraz z podziałem na poziomy trudności.
+ 
+\cleardoublepage
+
+\rule{0cm}{0cm}
+
+\vfill
+
+\begin{center}
+\Huge\bfseries Dodatek\\Szczegółowy opis typów i~funkcji\par
+\end{center}
+
+\vfill 
+
+\rule{0cm}{0cm}
+
+\end{document}
+% Koniec wieńczy dzieło.
